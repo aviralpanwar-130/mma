@@ -1,0 +1,26 @@
+[
+  {
+    "id": "youtube",
+    "name": "YouTube",
+    "description": "Weekly episodes & breakdowns.",
+    "href": "https://www.youtube.com/@MMABaithak",
+    "watermark": "YT",
+    "icon": "youtube"
+  },
+  {
+    "id": "twitter",
+    "name": "X / Twitter",
+    "description": "Real-time fight night reactions.",
+    "href": "https://x.com/mmabaithak",
+    "watermark": "X",
+    "icon": "twitter"
+  },
+  {
+    "id": "threads",
+    "name": "Threads",
+    "description": "Deeper community discussions.",
+    "href": "https://www.threads.net/@mmabaithak",
+    "watermark": "TH",
+    "icon": "threads"
+  }
+]

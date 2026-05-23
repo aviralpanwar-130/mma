@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "weightClass": "Lightweight Title",
+    "fighterA": "Islam Makhachev",
+    "fighterB": "Charles Oliveira",
+    "dateLabel": "March 23",
+    "location": "Las Vegas, NV",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "weightClass": "Bantamweight",
+    "fighterA": "Sean O'Malley",
+    "fighterB": "Marlon Vera",
+    "dateLabel": "April 13",
+    "location": "Abu Dhabi"
+  },
+  {
+    "id": "3",
+    "weightClass": "Featherweight",
+    "fighterA": "Alex Volkanovski",
+    "fighterB": "Ilia Topuria",
+    "dateLabel": "May 04",
+    "location": "Rio de Janeiro"
+  }
+]
