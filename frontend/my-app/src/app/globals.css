@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+/* ─── Design tokens (MMA Baithak — Stitch / mobile mockup) ─── */
+@theme {
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-surface: #000000;
+  --color-surface-elevated: #1a1a1a;
+  --color-surface-card: #141414;
+  --color-surface-muted: #0a0a0a;
+  --color-on-surface: #ffffff;
+  --color-on-surface-muted: #a3a3a3;
+  --color-on-surface-dim: #737373;
+  --color-primary: #e62127;
+  --color-primary-bright: #ff2a32;
+  --color-on-primary: #ffffff;
+  --color-border: #2a2a2a;
+  --color-border-subtle: #1f1f1f;
+
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-anton), Impact, "Arial Narrow", sans-serif;
+  --font-label: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --spacing-section: 4rem;
+  --spacing-section-lg: 7.5rem;
+}
+
+:root {
+  --container-margin: clamp(16px, 5vw, 80px);
+  --fight-red: #e62127;
+  --fight-red-glow: rgba(230, 33, 39, 0.55);
+  /* Header: safe-area + fixed bar (no vertical padding on header) */
+  --site-header-bar: 4.75rem;
+  --site-header-height: calc(
+    var(--site-header-bar) + env(safe-area-inset-top, 0px)
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-hanken), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography utilities */
+.font-display {
+  font-family: var(--font-anton), Impact, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-label {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.section-title {
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.section-eyebrow {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--fight-red);
+}
+
+/* Effects */
+.crimson-glow {
+  box-shadow: 0 0 20px var(--fight-red-glow), 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.crimson-glow-hover:hover {
+  box-shadow: 0 0 32px var(--fight-red-glow), 0 6px 28px rgba(0, 0, 0, 0.55);
+}
+
+.text-glow {
+  text-shadow: 0 0 12px var(--fight-red-glow), 0 0 24px rgba(230, 33, 39, 0.25);
+}
+
+/* Blur only on desktop — backdrop-filter breaks position:fixed menus on iOS Safari */
+.glass-nav {
+  background-color: rgba(0, 0, 0, 0.92) !important;
+}
+
+@media (min-width: 768px) {
+  .glass-nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+.site-header {
+  isolation: auto;
+  padding: 0 !important;
+  margin: 0;
+}
+
+/* Hero: top-down spotlight (mobile mockup) */
+.hero-spotlight {
+  position: relative;
+  background-color: #000000;
+}
+
+.hero-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 90% 55% at 50% 0%,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.04) 35%,
+    transparent 70%
+  );
+}
+
+.hero-spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent 40%, #000000 100%);
+}
+
+/* Desktop: arena texture + octagon image */
+@media (min-width: 768px) {
+  .hero-arena {
+    background-image: radial-gradient(
+      circle at center,
+      rgba(230, 33, 39, 0.08) 0%,
+      rgba(0, 0, 0, 1) 70%
+    );
+  }
+}
+
+/* Fight card accent */
+.fight-card-featured {
+  border-left: 4px solid var(--fight-red);
+  background-color: #1a1a1a;
+}
+
+.fight-card {
+  background-color: #141414;
+  border-left: 4px solid transparent;
+}
+
+.fight-card:hover {
+  border-left-color: var(--fight-red);
+  background-color: #1f1f1f;
+}
+
+/* Content card */
+.content-card {
+  background-color: #141414;
+  border: 1px solid #1f1f1f;
+}
+
+.content-card + .content-card {
+  border-top: none;
+}
+
+@media (min-width: 768px) {
+  .content-card + .content-card {
+    border-top: 1px solid #1f1f1f;
+  }
+}
+
+/* Social row (mobile list) */
+.social-row {
+  position: relative;
+  border-bottom: 1px solid #2a2a2a;
+  background-color: #0a0a0a;
+  overflow: hidden;
+}
+
+.social-row-watermark {
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-anton), Impact, sans-serif;
+  font-size: clamp(5rem, 18vw, 8rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  user-select: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: var(--fight-red);
+  color: #fff;
+}
