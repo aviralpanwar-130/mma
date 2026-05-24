@@ -13,4 +13,8 @@ Readable guides for developers working on the MMA site.
 | [maintaining-docs.md](./maintaining-docs.md) | Keep docs in sync with architecture and standards |
 | [features-guide.md](./features-guide.md) | Planned features and how to work inside a feature folder |
 
+For feature product specs, see [../prd/README.md](../prd/README.md).
+
+For backend API repo, see [backend/README.md](./backend/README.md).
+
 For AI-assisted development, see [../ai/README.md](../ai/README.md).

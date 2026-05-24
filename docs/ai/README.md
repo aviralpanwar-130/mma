@@ -12,6 +12,7 @@ Concise, enforceable docs for Cursor and other AI coding tools. Optimized for **
 | [folder-placement.md](./folder-placement.md) | “Where should this file go?” |
 | [rules-checklist.md](./rules-checklist.md) | Before finishing a change; validation |
 | [new-feature-template.md](./new-feature-template.md) | Adding a new domain feature |
+| [backend/architecture-skill.md](./backend/architecture-skill.md) | Backend repo — modules, domain, AI separation |
 
 ## Recommended usage
 

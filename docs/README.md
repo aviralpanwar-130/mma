@@ -7,7 +7,10 @@ Documentation for **MMA Baithak** — combat sports media platform (Next.js App 
 | Folder | Audience | Purpose |
 |--------|----------|---------|
 | [human/](./human/) | Developers | Onboarding, architecture overview, conventions |
+| [human/backend/](./human/backend/) | Developers | Backend (Node.js + Express) architecture |
+| [prd/](./prd/) | Product & engineering | Feature PRDs and product specs |
 | [ai/](./ai/) | AI assistants (Cursor, etc.) | Concise, enforceable rules for code generation |
+| [ai/backend/](./ai/backend/) | AI assistants | Backend repo rules and structure |
 
 ## Quick links
 
@@ -20,6 +23,15 @@ Documentation for **MMA Baithak** — combat sports media platform (Next.js App 
 - [What to avoid](./human/what-to-avoid.md) — anti-patterns that block CMS/API migration
 - [Maintaining documentation](./human/maintaining-docs.md) — when and how to update docs
 - [Features guide](./human/features-guide.md)
+
+### Product requirements (PRD)
+- [PRD index](./prd/README.md)
+- [AI Fight Predictor](./prd/ai-fight-predictor.md)
+
+### Backend
+- [Backend overview](./human/backend/README.md)
+- [Backend architecture](./human/backend/architecture-overview.md)
+- [Backend AI skill](./ai/backend/architecture-skill.md)
 
 ### AI reference
 - [Project brief](./ai/project-brief.md) — product context for agents
